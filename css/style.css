@@ -15,7 +15,7 @@ html {
 }
 
 p{
-    color: rgb(85, 85, 85)
+    color: rgb(5, 5, 5)
 }
 
 /* Transition */
@@ -267,6 +267,7 @@ a, .btn {
     margin-top: 10%;
     justify-content: center;
     
+    
  }
  
 
@@ -311,7 +312,18 @@ a, .btn {
     text-align: center;
 
  }
+.text-container{
+   
+   padding: 20px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 2%;
 
+}
+.text-container p{
+   margin-bottom: 20px;
+   line-height: 1.5;
+}
  .section-container{
     gap: 4rem;
     height: 80%;
@@ -323,6 +335,7 @@ a, .btn {
     height: 400px;
     width: 400px;
     margin: auto 0;
+    justify-items: center;
  }
  
  /* Experience */
