@@ -302,7 +302,7 @@ a, .btn {
     bottom: 2.5rem;
  }
 
- .details-container {
+ .detail-container {
     padding: 1.5rem;
     flex: 1;
     background: white;
@@ -351,34 +351,49 @@ a, .btn {
     font-weight: 600;
     justify-content: center;
     flex-direction: center;
+    
    }
-   .experience-details-container{
-   display: flex;
-    text-align: initial;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-    justify-content: space-around;
-   }
- .article-container{
-    display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
-
-
- }
- 
-
+   #projects {
+      max-width: 1200px; /* Adjust this value as needed */
+      margin: 0 auto; /* Centers the section horizontally */
+      padding: 0 20px; /* Padding to add space inside the container */
+      box-sizing: border-box; /* Includes padding in the element’s total width and height */
+  }
+  
+  .experience-details-container {
+      display: flex;
+      flex-wrap: wrap; /* Allows items to wrap to the next line */
+      justify-content: center; /* Centers items horizontally */
+      gap: 1rem; /* Space between items */
+      padding: 20px;
+  }
+  
+  .about-containers {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .details-container {
+      flex: 1 1 250px;
+      background: rgb(250, 250, 250);
+      border-radius: 2rem;
+      border: rgb(163, 163, 163) 0.1rem solid;
+      padding: 1rem;
+      text-align: center;
+    
+  }
+  
  article{
     display: flex;
     width: 10rem;
     justify-content: space-around;
     gap: 0.5rem;
  }
-
+.article-container{
+   gap: 2rem;
+}
  article .icon{
     cursor: default;
  }
