@@ -1,5 +1,6 @@
 // Tailwind CSS Configuration
 tailwind.config = {
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -99,6 +100,40 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, observerOptions);
+
+// Dark Mode Logic
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const htmlElement = document.documentElement;
+
+  // Check for saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (
+    savedTheme === "dark" ||
+    (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    htmlElement.classList.add("dark");
+  }
+
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+      htmlElement.classList.toggle("dark");
+      const isDark = htmlElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  }
+});
+
+// Scroll Progress Bar Logic
+window.addEventListener("scroll", () => {
+  const scrollProgress = document.getElementById("scroll-progress");
+  if (scrollProgress) {
+    const totalHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.pageYOffset / totalHeight) * 100;
+    scrollProgress.style.width = `${progress}%`;
+  }
+});
 
 // Observe elements for animation
 document.addEventListener("DOMContentLoaded", function () {
